@@ -6,6 +6,5 @@
 
   tasks:
   - name: Security Compliance Scan
-    pause:
-      seconds: 15
+    shell: "uptime; free -h; df -h"
 
