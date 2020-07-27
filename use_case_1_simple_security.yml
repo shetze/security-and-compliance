@@ -1,0 +1,11 @@
+---
+- name: Check Security Compliance
+  hosts: all
+  become: yes
+  gather_facts: false
+
+  tasks:
+  - name: Security Compliance Scan
+    pause:
+      seconds: 15
+

@@ -1,0 +1,5 @@
+---
+- name: Check PCI DSS Compliance
+  hosts: all
+  roles:
+    - { role: RedHatOfficial.rhel8_pci_dss }

@@ -1,0 +1,6 @@
+---
+roles:
+  - name: RedHatOfficial.rhel8_pci_dss
+    version: 0.1.46
+  - name: RedHatOfficial.rhel7_pci_dss
+    version: 0.1.48
