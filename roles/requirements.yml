@@ -1,5 +1,0 @@
----
-- src: RedHatOfficial.rhel8_pci_dss
-  version: 0.1.46
-- src: RedHatOfficial.rhel7_pci_dss
-    version: 0.1.48
