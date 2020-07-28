@@ -5,6 +5,8 @@
   gather_facts: false
 
   tasks:
+    - shell: echo "Echo Message Hello World"
+
     - shell: echo "The variable 'Moppel' is defined '{{ Moppel }}'"
       when: Moppel is defined
 
