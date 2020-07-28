@@ -5,17 +5,17 @@
   gather_facts: false
 
   tasks:
-    - shell: echo "The variable 'tower_webhook_payload' is defined: '{{ tower_webhook_payload }}'"
-      when: tower_webhook_payload is defined
-
-    - shell: echo "The variable 'tower_webhook_payload.repository' is defined: '{{ tower_webhook_payload.repository }}'"
-      when: tower_webhook_payload.repository is defined
-
-    - shell: echo "The variable 'tower_webhook_payload.repository.full_name' is defined: '{{ tower_webhook_payload.repository.full_name }}'"
+    - shell: echo "The variable 'tower_webhook_payload.repository.full_name' is defined {{ tower_webhook_payload.repository.full_name }}"
       when: tower_webhook_payload.repository.full_name is defined
 
-    - shell: echo "The variable 'tower_webhook_payload.head_commit.id' is defined: '{{ tower_webhook_payload.head_commit.id }}'"
+    - shell: echo "The variable 'tower_webhook_payload' is defined {{ tower_webhook_payload }}"
+      when: tower_webhook_payload is defined
+
+    - shell: echo "The variable 'tower_webhook_payload.repository' is defined {{ tower_webhook_payload.repository }}"
+      when: tower_webhook_payload.repository is defined
+
+    - shell: echo "The variable 'tower_webhook_payload.head_commit.id' is defined '{{ tower_webhook_payload.head_commit.id }}'"
       when: tower_webhook_payload.head_commit.id is defined
 
-    - shell: echo "The variable 'tower_webhook_payload.repository.full_name' is defined: '{{ tower_webhook_payload.repository.full_name }}'"
+    - shell: echo "The variable 'tower_webhook_payload.repository.full_name' is defined '{{ tower_webhook_payload.repository.full_name }}'"
       when: tower_webhook_payload.repository.full_name is defined
