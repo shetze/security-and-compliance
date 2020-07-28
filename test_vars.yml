@@ -5,6 +5,9 @@
   gather_facts: false
 
   tasks:
+    - shell: echo "The variable 'Moppel' is defined '{{ Moppel }}'"
+      when: Moppel is defined
+
     - shell: echo "The variable 'tower_webhook_payload.repository.full_name' is defined {{ tower_webhook_payload.repository.full_name }}"
       when: tower_webhook_payload.repository.full_name is defined
 
@@ -17,5 +20,5 @@
     - shell: echo "The variable 'tower_webhook_payload.head_commit.id' is defined '{{ tower_webhook_payload.head_commit.id }}'"
       when: tower_webhook_payload.head_commit.id is defined
 
-    - shell: echo "The variable 'tower_webhook_payload.repository.full_name' is defined '{{ tower_webhook_payload.repository.full_name }}'"
-      when: tower_webhook_payload.repository.full_name is defined
+    - shell: echo "The variable 'tower_webhook_event_guid' is defined '{{ tower_webhook_event_guid }}'"
+      when: tower_webhook_event_guid is defined
